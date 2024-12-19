@@ -26,7 +26,7 @@ def wordCounter():
             word_count[word] += 1
         else:
             word_count[word] = 1
-    return word_count
+    result.insert(0,word_count)
 
 app = tk.Tk()
 app.title = "word counter"
@@ -36,5 +36,8 @@ sentenceEntry.pack(pady=5)
 
 add_button = tk.Button(app, text="Add Task", width=15, command=wordCounter)
 add_button.pack(pady=5)
+
+result = tk.Listbox(app, width=120, height=15)
+result.pack(pady=10)
 
 app.mainloop()
