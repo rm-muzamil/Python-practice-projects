@@ -1,0 +1,90 @@
+You: hello
+Chatbot: hello2
+You: how are you?
+Chatbot: I'm just a bot, but I'm doing great! How about you?
+You: how are you?
+Chatbot: hay2
+You: h
+Chatbot: I'm sorry, I didn't catch that.
+You: 
+Chatbot: I'm still learning. Can you ask something else?
+You: 
+Chatbot: I'm still learning. Can you ask something else?
+You: u
+Chatbot: Can you please rephrase?
+You: u
+Chatbot: Can you please rephrase?
+You: 
+Chatbot: I'm still learning. Can you ask something else?
+You: u
+Chatbot: I'm still learning. Can you ask something else?
+You: hello
+Chatbot: Hi there! How can I help you?
+You: jj
+Chatbot: I'm sorry, I didn't catch that.
+You: hello
+Chatbot: hello2
+--------------------
+You: hello
+Chatbot: hello2
+--------------------
+You: hello
+Chatbot: Hi there! How can I help you?
+--------------------
+You: hello
+Chatbot: Hi there! How can I help you?
+--------------------
+You: hello
+Chatbot: hello2
+--------------------
+You: hello
+Chatbot: Hi there! How can I help you?
+--------------------
+You: hy
+Chatbot: hello2
+--------------------
+You: hy
+Chatbot: hello2
+--------------------
+You: hy
+Chatbot: hello2
+--------------------
+You: hy
+Chatbot: hello2
+--------------------
+You: hy
+Chatbot: hello2
+--------------------
+You: hey
+Chatbot: hello2
+--------------------
+You: hey
+Chatbot: Hi there! How can I help you?
+--------------------
+You: hey
+Chatbot: hello2
+--------------------
+You: hey
+Chatbot: hello2
+--------------------
+You: hey
+Chatbot: hello2
+--------------------
+You: hey
+Chatbot: hello2
+--------------------
+You: hey
+Chatbot: hello2
+--------------------
+You: hey
+Chatbot: hello2
+--------------------
+You: 
+Chatbot: I'm still learning. Can you ask something else?
+--------------------
+You: oye
+Chatbot: Hi there! How can I help you?
+--------------------
+You: jj
+Chatbot: Can you please rephrase?
+--------------------
