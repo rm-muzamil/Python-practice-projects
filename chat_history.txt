@@ -1,90 +1,63 @@
+You: hy
+Chatbot: Can you please rephrase?
+--------------------
 You: hello
-Chatbot: hello2
-You: how are you?
-Chatbot: I'm just a bot, but I'm doing great! How about you?
-You: how are you?
-Chatbot: hay2
-You: h
+Chatbot: Hi there! How can I help you?
+--------------------
+You: hello
+Chatbot: Hi there! How can I help you?
+--------------------
+You: how are you
+Chatbot: I'm doing great! How about you?
+--------------------
+rm: hy
 Chatbot: I'm sorry, I didn't catch that.
-You: 
+--------------------
+rm: hel
+Chatbot: Hi there! How can I help you?
+--------------------
+mm: hy
 Chatbot: I'm still learning. Can you ask something else?
-You: 
+--------------------
+mm: hell
+Chatbot: Hi there! How can I help you?
+--------------------
+mm: im sad
 Chatbot: I'm still learning. Can you ask something else?
-You: u
+--------------------
+mm: sad
+Chatbot: I'm still learning. Can you ask something else?
+--------------------
+mm: happy
+Chatbot: That's great to hear!
+--------------------
+mm: sad
 Chatbot: Can you please rephrase?
-You: u
+--------------------
+mm: angry
+Chatbot: I'm still learning. Can you ask something else?
+--------------------
+mm: how are you
+Chatbot: I'm doing great! How about you?
+--------------------
+mm: happy
+Chatbot: I'm glad you're feeling happy!
+--------------------
+mm: sad
+Chatbot: I'm still learning. Can you ask something else?
+--------------------
+hy: hy
 Chatbot: Can you please rephrase?
-You: 
-Chatbot: I'm still learning. Can you ask something else?
-You: u
-Chatbot: I'm still learning. Can you ask something else?
-You: hello
-Chatbot: Hi there! How can I help you?
-You: jj
-Chatbot: I'm sorry, I didn't catch that.
-You: hello
-Chatbot: hello2
 --------------------
-You: hello
-Chatbot: hello2
+hy: h
+Chatbot: Hello! How can I help you?
 --------------------
-You: hello
-Chatbot: Hi there! How can I help you?
+fact: fact
+Chatbot: Did you know? The Eiffel Tower can be 15 cm taller during the summer.
 --------------------
-You: hello
-Chatbot: Hi there! How can I help you?
+fact: fact
+Chatbot: Did you know? The Eiffel Tower can be 15 cm taller during the summer.
 --------------------
-You: hello
-Chatbot: hello2
---------------------
-You: hello
-Chatbot: Hi there! How can I help you?
---------------------
-You: hy
-Chatbot: hello2
---------------------
-You: hy
-Chatbot: hello2
---------------------
-You: hy
-Chatbot: hello2
---------------------
-You: hy
-Chatbot: hello2
---------------------
-You: hy
-Chatbot: hello2
---------------------
-You: hey
-Chatbot: hello2
---------------------
-You: hey
-Chatbot: Hi there! How can I help you?
---------------------
-You: hey
-Chatbot: hello2
---------------------
-You: hey
-Chatbot: hello2
---------------------
-You: hey
-Chatbot: hello2
---------------------
-You: hey
-Chatbot: hello2
---------------------
-You: hey
-Chatbot: hello2
---------------------
-You: hey
-Chatbot: hello2
---------------------
-You: 
-Chatbot: I'm still learning. Can you ask something else?
---------------------
-You: oye
-Chatbot: Hi there! How can I help you?
---------------------
-You: jj
-Chatbot: Can you please rephrase?
+fact: fact
+Chatbot: Fun fact: Honey never spoils. Archaeologists have found pots of honey in ancient Egyptian tombs that are over 3,000 years old and still edible.
 --------------------
