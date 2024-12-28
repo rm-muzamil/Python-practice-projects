@@ -61,3 +61,15 @@ Chatbot: Did you know? The Eiffel Tower can be 15 cm taller during the summer.
 fact: fact
 Chatbot: Fun fact: Honey never spoils. Archaeologists have found pots of honey in ancient Egyptian tombs that are over 3,000 years old and still edible.
 --------------------
+you: hy
+Chatbot: I'm sorry, I didn't catch that.
+--------------------
+you: hy
+Chatbot: Can you please rephrase?
+--------------------
+you: h
+Chatbot: Hey! Good to see you!
+--------------------
+you: fact
+Chatbot: Fun fact: Honey never spoils. Archaeologists have found pots of honey in ancient Egyptian tombs that are over 3,000 years old and still edible.
+--------------------

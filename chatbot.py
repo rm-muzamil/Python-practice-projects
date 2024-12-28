@@ -1,12 +1,35 @@
 # Simple Rule-based Chatbot
+import tkinter as tk
 import random
+import requests
 
 from fuzzywuzzy import process
 
-def get_user_name():
-    name = input("What's your name? :")
-    print(f"Nice to meet you {name}")
-    return name
+
+def send_message():
+    user_message = user_input.get()
+    chat_log.insert(tk.END, f"You: {user_message}\n")
+    response = chatbot_response(user_message)
+    chat_log.insert(tk.END, f"Chatbot: {response}\n")
+    user_input.delete(0, tk.END)
+    save_history(user_message,response)
+    
+root = tk.Tk()
+root.title("Chatbot")
+
+chat_log = tk.Text(root, height=20, width=50)
+chat_log.pack()
+
+user_input = tk.Entry(root, width=40)
+user_input.pack()
+
+send_button = tk.Button(root, text="Send", command=send_message)
+send_button.pack()
+
+# def get_user_name():
+#     name = input("What's your name? :")
+#     print(f"Nice to meet you {name}")
+#     return name
 
 def random_fact():
     facts = [
@@ -15,6 +38,19 @@ def random_fact():
         "Here's something cool: Octopuses have three hearts!",
     ]
     return random.choice(facts)
+
+def get_weather(city):
+    api_key = "135f82dfd6a2a2217651464425566c59"
+    url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric"
+    response = requests.get(url)
+    if response.status_code == 200:
+        data = response.json()
+        weather = data["weather"][0]["description"]
+        temp = data["main"]["temp"]
+        return f"The weather in {city} is {weather} with a temperature of {temp}°C."
+    else:
+        return "Sorry, I couldn't fetch the weather for that city."
+
 
 
 def detect_emotions(user_input):
@@ -33,7 +69,7 @@ def detect_emotions(user_input):
 def save_history(user,bot):
     with open("chat_history.txt","a") as file:
 
-        file.write(f"{user_name}: {user}\n")
+        file.write(f"you: {user}\n")
         file.write(f"Chatbot: {bot}\n")
         file.write("-" * 20 + "\n")
         
@@ -78,16 +114,21 @@ def chatbot_response(user_input):
         return random.choice(responses[match])
     else:
         return random.choice(fall_back_response)
-user_name = get_user_name()
+# user_name = get_user_name()
 
 # Chat loop
-print("Chatbot: Hello! Type 'bye' to exit.")
-while True:
-    user_input = input(f"{user_name} : ")
-    # user_input = prosesses_input(user_input)
-    if user_input.lower() == "bye":
-        print("Chatbot: ",chatbot_response(user_input))
-        break
-    bot_res = chatbot_response(user_input)
-    print("Chatbot:", bot_res)
-    save_history(user_input,bot_res)
+# print("Chatbot: Hello! Type 'bye' to exit.")
+# while True:
+#     user_input = input(f"{user_name} : ")
+#     # user_input = prosesses_input(user_input)
+    # if user_input.lower() == "bye":
+    #     print("Chatbot: ",chatbot_response(user_input))
+    #     break
+#     bot_res = chatbot_response(user_input)
+#     print("Chatbot:", bot_res)
+    
+     
+    
+    
+    
+root.mainloop()
