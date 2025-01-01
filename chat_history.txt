@@ -73,3 +73,23 @@ Chatbot: Hey! Good to see you!
 you: fact
 Chatbot: Fun fact: Honey never spoils. Archaeologists have found pots of honey in ancient Egyptian tombs that are over 3,000 years old and still edible.
 --------------------
+you: h
+Chatbot: Hey! Good to see you!
+--------------------
+you: my name is rm
+Chatbot: Nice to meet you, rm!
+--------------------
+you: what is my name
+Chatbot: I'm still learning. Can you ask something else?
+--------------------
+you: what's my name
+Chatbot: Your name is rm.
+--------------------
+you: you know what
+Chatbot: That's interesting! Tell me more.
+--------------------
+you: sad
+you: i feel not reaily good
+you: no
+Chatbot: That's interesting! Tell me more.
+--------------------

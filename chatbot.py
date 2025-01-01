@@ -3,7 +3,22 @@ import tkinter as tk
 import random
 import requests
 
+from textblob import TextBlob
 from fuzzywuzzy import process
+
+
+user_data = {}
+
+def analyze_sentiment(user_input):
+    analysis = TextBlob(user_input)
+    if analysis.sentiment.polarity > 0:
+        return "You seem happy! 😊"
+    elif analysis.sentiment.polarity < 0:
+        return "I'm sorry to hear that. 😟"
+    else:
+        return "That's interesting! Tell me more."
+
+# Use in the chatbot
 
 
 def send_message():
@@ -94,9 +109,10 @@ def fuzzy_response(user_input, responses):
 #     return synonyms.get(user_input.lower(), user_input.lower())
 
 def chatbot_response(user_input):
-    emotion_res = detect_emotions(user_input)
-    if emotion_res:
-        return emotion_res
+    global user_data
+    
+    
+
     responses = {
         "tell me fact" : [random_fact()],
        "hello": ["Hi there!", "Hello! How can I help you?", "Hey! Good to see you!"],
@@ -114,18 +130,11 @@ def chatbot_response(user_input):
         return random.choice(responses[match])
     else:
         return random.choice(fall_back_response)
-# user_name = get_user_name()
+    
+    
+    sentiment = analyze_sentiment(user_input)
+    return sentiment
 
-# Chat loop
-# print("Chatbot: Hello! Type 'bye' to exit.")
-# while True:
-#     user_input = input(f"{user_name} : ")
-#     # user_input = prosesses_input(user_input)
-    # if user_input.lower() == "bye":
-    #     print("Chatbot: ",chatbot_response(user_input))
-    #     break
-#     bot_res = chatbot_response(user_input)
-#     print("Chatbot:", bot_res)
     
      
     
