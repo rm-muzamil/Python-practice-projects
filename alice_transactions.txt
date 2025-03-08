@@ -1,0 +1,18 @@
+2025-03-08 23:41:08 - Deposit: $500, Balance: $1500
+2025-03-08 23:41:08 - Deposit: $500, Balance: $1500
+2025-03-08 23:41:08 - Withdraw: $-300, Balance: $1200
+2025-03-08 23:41:08 - Withdrawal: $300, Balance: $1200
+2025-03-08 23:46:02 - Deposit: $500, Balance: $1700.0
+2025-03-08 23:46:02 - Deposit: $500, Balance: $1700.0
+2025-03-08 23:46:02 - Withdraw: $-300, Balance: $1400.0
+2025-03-08 23:46:02 - Withdrawal: $300, Balance: $1400.0
+2025-03-08 23:47:10 - Deposit: $500, Balance: $1900.0
+2025-03-08 23:47:10 - Deposit: $500, Balance: $1900.0
+2025-03-08 23:47:10 - Withdraw: $-300, Balance: $1600.0
+2025-03-08 23:47:10 - Withdrawal: $300, Balance: $1600.0
+2025-03-08 23:49:37 - Transfer Out: $-100, Balance: $1500.0
+2025-03-08 23:49:37 - Transfer Out: $100, Balance: $1500.0
+2025-03-08 23:52:34 - Transfer Out: $-100, Balance: $1400.0
+2025-03-08 23:52:34 - Transfer Out: $100, Balance: $1400.0
+2025-03-08 23:53:18 - Transfer Out: $-1900, Balance: $-500.0
+2025-03-08 23:53:18 - Transfer Out: $1900, Balance: $-500.0

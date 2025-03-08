@@ -161,3 +161,13 @@ transfer_money(savings, current, 400)
 print("\n--- Final Account Summaries ---")
 savings.show_account_summary()
 current.show_account_summary()
+
+muzammil = CurrentAccount("RM MUzammil", 10000)
+bilal = CurrentAccount("Bilal", 10000 )
+
+transfer_money(muzammil,bilal,5000)
+muzammil.show_account_summary()
+bilal.show_account_summary()
+muzammil.show_transaction_history()
+bilal.show_transaction_history()
+
