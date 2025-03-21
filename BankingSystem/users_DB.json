@@ -1,0 +1,10 @@
+{
+    "text": {
+        "password": "text",
+        "balance": 0,
+        "transactions": [
+            "Deposited : $10000",
+            "Withdrew: $10000"
+        ]
+    }
+}

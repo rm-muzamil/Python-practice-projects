@@ -47,5 +47,9 @@
             "Received $100.0 from rm",
             "Received $50.0 from rm3"
         ]
+    },
+    "new2": {
+        "password": "new2",
+        "balance": 2000.0
     }
 }

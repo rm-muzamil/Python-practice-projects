@@ -73,122 +73,122 @@ def transfer(users, sender, receiver, amount):
 session = None
 users = load_users()
 
-# while True:
-#     print("\n1. Register\n2. Login\n3. Deposit\n4. Withdraw\n5. Transfer\n6. Logout\n7. Exit")
-#     choice = input("Choose an option: ")
+while True:
+    print("\n1. Register\n2. Login\n3. Deposit\n4. Withdraw\n5. Transfer\n6. Logout\n7. Exit")
+    choice = input("Choose an option: ")
     
-#     if choice == "1":
-#         uname = input("Enter username: ")
-#         pwd = input("Enter password: ")
-#         register_user(uname, pwd)
-#     elif choice == "2":
-#         uname = input("Enter username: ")
-#         pwd = input("Enter password: ")
-#         session = login_user(uname, pwd)
-#     elif choice == "3":
-#         if session:
-#             amt = float(input("Enter amount to deposit: "))
-#             deposit(session, amt)
-#         else:
-#             print("❌ You must be logged in to deposit!")
-#     elif choice == "4":
-#         if session:
-#             amt = float(input("Enter amount to withdraw: "))
-#             withdraw(session, amt)
-#         else:
-#             print("❌ You must be logged in to withdraw!")
-#     elif choice == "5":
-#         if session:
-#             receiver = input("Enter receiver's username: ")
-#             amt = float(input("Enter amount to transfer: "))
-#             transfer(users, session, receiver, amt)
-#         else:
-#             print("❌ You must be logged in to transfer money!")
-#     elif choice == "6":
-#         if session:
-#             print(f"👋 {session} logged out successfully.")
-#             session = None
-#         else:
-#             print("❌ No active session to logout!")
-#     elif choice == "7":
-#         print("🚪 Exiting system. Goodbye!")
-#         break
-#     else:
-#         print("❌ Invalid choice. Try again!")
+    if choice == "1":
+        uname = input("Enter username: ")
+        pwd = input("Enter password: ")
+        register_user(uname, pwd)
+    elif choice == "2":
+        uname = input("Enter username: ")
+        pwd = input("Enter password: ")
+        session = login_user(uname, pwd)
+    elif choice == "3":
+        if session:
+            amt = float(input("Enter amount to deposit: "))
+            deposit(session, amt)
+        else:
+            print("❌ You must be logged in to deposit!")
+    elif choice == "4":
+        if session:
+            amt = float(input("Enter amount to withdraw: "))
+            withdraw(session, amt)
+        else:
+            print("❌ You must be logged in to withdraw!")
+    elif choice == "5":
+        if session:
+            receiver = input("Enter receiver's username: ")
+            amt = float(input("Enter amount to transfer: "))
+            transfer(users, session, receiver, amt)
+        else:
+            print("❌ You must be logged in to transfer money!")
+    elif choice == "6":
+        if session:
+            print(f"👋 {session} logged out successfully.")
+            session = None
+        else:
+            print("❌ No active session to logout!")
+    elif choice == "7":
+        print("🚪 Exiting system. Goodbye!")
+        break
+    else:
+        print("❌ Invalid choice. Try again!")
 
 # Create the main window3
 
-def save_user(username, password):
-    users = load_users()
-    if username in users:
-        messagebox.showerror("Error", "Username already exists!")
-    else:
-        users[username] = {"password": password, "balance": 0, "transactions": []}
-        with open(USER_DB, "w") as file:
-            json.dump(users, file, indent=4)
-        messagebox.showinfo("Success", "Registration successful! Please login.")
+# def save_user(username, password):
+#     users = load_users()
+#     if username in users:
+#         messagebox.showerror("Error", "Username already exists!")
+#     else:
+#         users[username] = {"password": password, "balance": 0, "transactions": []}
+#         with open(USER_DB, "w") as file:
+#             json.dump(users, file, indent=4)
+#         messagebox.showinfo("Success", "Registration successful! Please login.")
 
-# Function to load user data
-def load_users():
-    if os.path.exists(USER_DB):
-        with open(USER_DB, "r") as file:
-            return json.load(file)
-    return {}
+# # Function to load user data
+# def load_users():
+#     if os.path.exists(USER_DB):
+#         with open(USER_DB, "r") as file:
+#             return json.load(file)
+#     return {}
 
-# Function to handle login
-def login():
-    username = entry_username.get()
-    password = entry_password.get()
-    users = load_users()
+# # Function to handle login
+# def login():
+#     username = entry_username.get()
+#     password = entry_password.get()
+#     users = load_users()
     
-    if username in users and users[username]["password"] == password:
-        messagebox.showinfo("Success", f"Welcome, {username}!")
-        root.destroy()  # Close login window
-        open_dashboard(username)  # Open the main dashboard
-    else:
-        messagebox.showerror("Error", "Invalid username or password!")
+#     if username in users and users[username]["password"] == password:
+#         messagebox.showinfo("Success", f"Welcome, {username}!")
+#         root.destroy()  # Close login window
+#         open_dashboard(username)  # Open the main dashboard
+#     else:
+#         messagebox.showerror("Error", "Invalid username or password!")
 
-# Function to open the registration window
-def open_register():
-    register_window = tk.Toplevel(root)
-    register_window.title("Register")
-    register_window.geometry("300x250")
+# # Function to open the registration window
+# def open_register():
+#     register_window = tk.Toplevel(root)
+#     register_window.title("Register")
+#     register_window.geometry("300x250")
 
-    tk.Label(register_window, text="Username:").pack(pady=5)
-    reg_username = tk.Entry(register_window)
-    reg_username.pack(pady=5)
+#     tk.Label(register_window, text="Username:").pack(pady=5)
+#     reg_username = tk.Entry(register_window)
+#     reg_username.pack(pady=5)
 
-    tk.Label(register_window, text="Password:").pack(pady=5)
-    reg_password = tk.Entry(register_window, show="*")
-    reg_password.pack(pady=5)
+#     tk.Label(register_window, text="Password:").pack(pady=5)
+#     reg_password = tk.Entry(register_window, show="*")
+#     reg_password.pack(pady=5)
 
-    tk.Button(register_window, text="Register", command=lambda: save_user(reg_username.get(), reg_password.get())).pack(pady=10)
+#     tk.Button(register_window, text="Register", command=lambda: save_user(reg_username.get(), reg_password.get())).pack(pady=10)
 
-# Function to open the user dashboard
-def open_dashboard(username):
-    dashboard = tk.Tk()
-    dashboard.title("Dashboard")
-    dashboard.geometry("300x200")
+# # Function to open the user dashboard
+# def open_dashboard(username):
+#     dashboard = tk.Tk()
+#     dashboard.title("Dashboard")
+#     dashboard.geometry("300x200")
 
-    tk.Label(dashboard, text=f"Welcome, {username}!", font=("Arial", 14)).pack(pady=20)
-    tk.Button(dashboard, text="Logout", command=dashboard.destroy).pack(pady=20)
+#     tk.Label(dashboard, text=f"Welcome, {username}!", font=("Arial", 14)).pack(pady=20)
+#     tk.Button(dashboard, text="Logout", command=dashboard.destroy).pack(pady=20)
     
-    dashboard.mainloop()
+#     dashboard.mainloop()
 
-# Main Login Window
-root = tk.Tk()
-root.title("Banking System")
-root.geometry("350x250")
+# # Main Login Window
+# root = tk.Tk()
+# root.title("Banking System")
+# root.geometry("350x250")
 
-tk.Label(root, text="Username:").pack(pady=5)
-entry_username = tk.Entry(root)
-entry_username.pack(pady=5)
+# tk.Label(root, text="Username:").pack(pady=5)
+# entry_username = tk.Entry(root)
+# entry_username.pack(pady=5)
 
-tk.Label(root, text="Password:").pack(pady=5)
-entry_password = tk.Entry(root, show="*")
-entry_password.pack(pady=5)
+# tk.Label(root, text="Password:").pack(pady=5)
+# entry_password = tk.Entry(root, show="*")
+# entry_password.pack(pady=5)
 
-tk.Button(root, text="Login", command=login).pack(pady=10)
-tk.Button(root, text="Register", command=open_register).pack(pady=5)
+# tk.Button(root, text="Login", command=login).pack(pady=10)
+# tk.Button(root, text="Register", command=open_register).pack(pady=5)
 
-root.mainloop()
+# root.mainloop()
